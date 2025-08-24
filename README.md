@@ -12,6 +12,17 @@ this is mainly just speculation, based on the hackathon teaser image. almost non
     returns a table of elements based on the selector
 - `gurt.create(tagName, attributes)`
     creates and returns an element based on the tag name, with the attributes table defining its attributes (duh)
+### crumbs
+assuming these act similar to standard web cookies. unsure if they're sandboxed, though they absolutely should be.
+- `gurt.crumbs.set({name, value, lifetime})`
+    sets crumb `name` to `value`, expiring after `lifetime`. unsure if `lifetime` is a number, or string for different length formatting. needs more info
+- `gurt.crumbs.get(name)`
+    returns value of crumb `name`. unsure if it returns crumb lifetime, needs more info
+- `gurt.crumbs.delete(name)`
+    deletes crumb `name`.
+- `gurt.crumbs.getAll()`
+    returns a table (or dictionary? not sure) of all the current active crumbs. needs more info
+    i swear if this isn't sandboxed this will cause MANY issues
 
 ## standard library
 prob similar to `gurt` but not directly browser related
@@ -25,17 +36,6 @@ prob similar to `gurt` but not directly browser related
     stops timeout `id`
 - `fetch(url, options)`
     fetches data from `url` with the specified options (possibly being a table or custom object)
-### crumbs
-assuming these act similar to standard web cookies. unsure if they're sandboxed, though they absolutely should be.
-- `gurt.crumbs.set({name, value, lifetime})`
-    sets crumb `name` to `value`, expiring after `lifetime`. unsure if `lifetime` is a number, or string for different length formatting. needs more info
-- `gurt.crumbs.get(name)`
-    returns value of crumb `name`. unsure if it returns crumb lifetime, needs more info
-- `gurt.crumbs.delete(name)`
-    deletes crumb `name`.
-- `gurt.crumbs.getAll()`
-    returns a table (or dictionary? not sure) of all the current active crumbs. needs more info
-    i swear if this isn't sandboxed this will cause MANY issues
     
 ## Element
 there are a LOT of items in this list, some of which i'm not 100% sure how they work. hopefully helps with the general idea?
