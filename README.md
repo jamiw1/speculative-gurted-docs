@@ -36,6 +36,10 @@ prob similar to `gurt` but not directly browser related
     stops timeout `id`
 - `fetch(url, options)`
     fetches data from `url` with the specified options (possibly being a table or custom object)
+- `encodeUrl(url)`
+    likely takes a string url, and encodes special characters (which aren't for the url, i.e. `/` `:` `?`) into characters which are supported for urls. unsure exactly which characters are supported, assuming same as regular web addresses
+- `decodeUrl(url)`
+    likely takes a string url, and decodes special characters into their regular unicode variants. unsure exactly which characters are support, assuming same as regular web addresses
     
 ## Element
 there are a LOT of items in this list, some of which i'm not 100% sure how they work. hopefully helps with the general idea?
@@ -91,6 +95,10 @@ there are a LOT of items in this list, some of which i'm not 100% sure how they 
     sets this element's visibility to true
 - `element:hide()`
     sets this element's visibility to false
+- `element:focus()`
+    sets the browsers focus onto this element, unsure if this applies only to things like input fields or buttons, or if it applies to all elements
+- `element:unfocus()`
+    removes focus from this element, if the element is focused. likely doesn't affect focus on other elements
 - `element:createTween()`
     returns a Tween, which can be customized and controlled.
 - `element:on(eventName, callback)`
