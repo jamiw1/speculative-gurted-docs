@@ -193,3 +193,10 @@ heads up, i don't know websockets very well. i'm just assuming how Gurted handle
     likely returns a number of the current Unix time. needs more info
 - `Time.format(timestamp, format)`
     returns a string, formatting `timestamp` based on `format`. unsure on what or how it's formatted, needs more info
+
+## Tags
+this is a list of known element tags that differs from standard HTML. some of these will be new (+), and some could be removed (-)
+- `<postprocess/>` (+)
+    allows you to implement post processing effects that cover the whole webpage. has presets to pick from, namely `Advanced CRT monitor simulation with scanlines and phosphor mask` and `Futuristic pixelated overlay`. unsure how choosing presets works, likely through a property. needs more info
+- `<shader/>` (+)
+    unsure exactly how this works, but assuming it does something similar to `<postprocess/>`, instead with custom user fragment shaders. needs more info
